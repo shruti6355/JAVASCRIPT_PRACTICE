@@ -43,6 +43,31 @@ jsuser.greeting2=function () {
 console.log(jsuser.greeting2());
 
 
+const syllbus={
+    sname:"PHP",
+    Pice:"1099",
+    sinstructor:"shruti"
+}
+
+const {sinstructor:instructor}=syllbus
+//console.log(sinstructor);
+console.log(instructor);
+
+
+
+//json
+
+// {
+//     "name":"shruti",
+//     "coursename":"Javascript",
+//     "price":"200"
+// }
+
+[
+    {},
+    {},
+    {}
+]
 
 
 
