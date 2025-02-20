@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DOM</title>
+        
+    </head>
+    <body style="background-color:black; color:white">
+        <ul class="language">
+            <li>Javascript</li>
+            
+        </ul>
+    </body>
+    <script>
+        function addLanguage(lang){
+            const li=document.createElement('li');
+            li.innerHTML=`${lang}`
+            document.querySelector('.language').appendChild(li)
+        }
+        addLanguage("Python")
+        addLanguage("Java")
+        addLanguage("Javascript")
+        addLanguage("PHP")
+
+
+
+
+
+        function addoptiLanguage(langname){
+            const li= document.createElement('li');
+            li.appendChild(document.createTextNode(langname))
+            document.querySelector('.language').appendChild(li)
+        }
+        addoptiLanguage("English")
+        addoptiLanguage("Gujrati")
+        addoptiLanguage("Marathi")
+        addoptiLanguage("Hindi")
+
+
+
+
+        //Edit
+
+     const secondLang = document.querySelector("li:nth-child(2)")
+     //secondLang.innerHTML="Hello"
+     const newli=document.createElement('li')
+        newli.textContent="Hello"
+        secondLang.replaceWith(newli)
+
+
+        //Edit
+
+        const firstLang=document.querySelector("li:first-child")
+        firstLang.outerHTML='<li> Typescript</li>'
+
+
+        //remove
+
+        const lastlang=document.querySelector('li:Last-child')
+        lastlang.remove()
+
+
+    </script>
+</html>
