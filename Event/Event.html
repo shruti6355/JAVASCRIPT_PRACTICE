@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body style="background-color:#414141;color:aliceblue;">
+        <h2>Images</h2>
+        <div>
+            <ul id="images">
+                <li><img width="200px" id="img1" src="img1.jpg" alt="pphotoshop"></li>
+                <li><img width="200px" id="elephant" src="elephant.jpg" alt="" ></li>
+                <li><img width="200px" id="girl" src="girl.jpg" alt=""></li>
+                <li><img width="200px" id="laptop" src="laptop.jpg" alt=""></li>
+                <li><a style="color:aliceblue;" href="https://www.google.co.in/" id="google">Google</a></li>
+            </ul> 
+                
+        </div>
+        <script >
+            /*document.getElementById('elephant').onclick=function(){
+                alert("Elephent click")
+            }*/
+
+            /*document.getElementById('elephant').addEventListener('click',function(){
+                alert("Elephant Clicked again")
+            },false)*/
+
+            /*document.getElementById('elephant').addEventListener('click',function(e){
+                    console.log(e);
+            },false)*/
+            
+
+            //eventpropogation: 2 contaext event bubbling event capturing
+
+
+            //bubbeling event:-botto to top 
+
+                   /* document.getElementById('images').addEventListener('click',function(e){
+                        console.log("click inside the ul");
+                },false)
+
+                document.getElementById('elephant').addEventListener('click',function(e){
+                    console.log("clicked elephant");
+            },false)*/
+
+
+            //capturing event:- top-bottom
+                /*document.getElementById('images').addEventListener('click',function(e){
+                        console.log("click inside the ul");
+                },true)
+
+                document.getElementById('elephant').addEventListener('click',function(e){
+                    console.log("clicked elephant");
+            },true)*/
+
+            //stoppropogation 
+
+           /* document.getElementById('images').addEventListener('click',function(e){
+                console.log("click inside the ul");
+        },false)
+
+        document.getElementById('elephant').addEventListener('click',function(e){
+            console.log("clicked elephant");
+            e.stopPropagation()
+    },false)*/
+
+
+    //defultprevent
+
+    /*document.getElementById('google').addEventListener
+    ('click',function(e){
+
+        e.PreventDefault();
+        console.log("Google Clicked")
+    },false)*/
+
+
+            //type,timestamp,defultprevented
+            //targrt, toelement,sourceelement.currentTarget
+            //clientx,clienty,screenx,screeny
+            //altkey,cltkey,shiftkey,keycode
+            //attachEvent()
+            //jquery-onEventListener
+
+
+
+            document.querySelector('#images')
+            .addEventListener('click',function(e){
+                
+            console.log(e.target.parentNode);
+            if(e.target.tagName==='IMG')
+            {
+                console.log(e.target.id)
+                let removeIT=e.target.parentNode
+            removeIT.remove()
+            //removeIT.parentNode.removeChild(removeIT)
+            }
+            
+
+            },false)
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--capturing event,bubbling event,stoppropagation,preventdefault,target,remove-->
